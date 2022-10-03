@@ -1,3 +1,15 @@
+
+.Navbar {
+  padding: 10px;
+}
+
+.main-bg {
+  height: 600px;
+  background-image: url('./moonbg1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 .App {
   text-align: center;
 }
