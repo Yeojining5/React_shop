@@ -38,6 +38,7 @@ function Detail(props) {
     }
   }, []) /* 컴포넌트 mount 시 1회만 실행하고 싶으면 이렇게! */
 
+  /****************** 숫자체크 *******************/
   useEffect(() => {
     //console.log(isNaN(input))
     if(isNaN(input)) {
@@ -66,7 +67,7 @@ function Detail(props) {
         <div className="row">
 
           <div className="col-md-6">
-            <img src={'../../img/padset ('+(product.id)+').png'} width="100%" />
+            <img src={'../../img/padset ('+(product.id+1)+').png'} width="100%" />
           </div>
           <div className="col-md-6">
             <h4 className="pt-5">{product.title}</h4>
