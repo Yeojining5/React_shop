@@ -12,11 +12,27 @@ import Detail from "./Routes/Detail.js"
 import Main from './Routes/Main';
 import Store from './Routes/Store';
 import Event from './Routes/Event';
+import Cart from './Routes/Cart';
+import { useEffect } from 'react';
 
 
 function App() {
 
-  let [padset, setPadset] = useState(data)
+  // useEffect(() => {
+  //   localStorage.setItem('watched', JSON.stringify( [] ))
+  // }, [])
+
+  // let obj = {name : 'kim'}
+  // //localStorage.setItem('data', obj) // object 자료형은 저장이 안됨
+  // localStorage.setItem('data', JSON.stringify(obj)) // -> object자료를 JSON으로 변환
+
+  // let data = localStorage.getItem('data')
+  // console.log(data); // {"name":"kim"}
+  // console.log(JSON.parse(data)); // {name: 'kim'} -> JSON자료를 object변환J하기
+  // console.log(JSON.parse(data).name); // kim
+
+
+  let [padset, setPadset] = useState(data) // ./data.js
 
   return (
     <div className="App">
@@ -34,6 +50,8 @@ function App() {
         <Route path="/store" element={<Store />} />
         <Route path="/store/detail/:id" element={<Detail padset={padset} />}/>
         
+        <Route path="/cart" element={<Cart />} />
+
         {/* Nested Routes */}
         <Route path="/about" element={<About />}>
           <Route path="member" element={<div>멤버임</div>} /> {/* /about/member */}

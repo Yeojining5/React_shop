@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
@@ -35,6 +35,11 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
+            <Form className="d-flex">
+              <Button variant="outline-success" onClick={()=>{ navigate('/cart') }}>
+                Cart
+              </Button>
+            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
